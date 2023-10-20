@@ -2,12 +2,9 @@
 ![Sim-Only Conda CI](https://github.com/USC-ACTLab/crazyswarm/workflows/Sim-Only%20Conda%20CI/badge.svg)
 [![Documentation Status](https://readthedocs.org/projects/crazyswarm/badge/?version=latest)](https://crazyswarm.readthedocs.io/en/latest/?badge=latest)
 
-# Crazyswarm
-A Large Nano-Quadcopter Swarm.
-
-
-> **Warning**
-> This repository is not actively maintained anymore. For new projects, please consider [Crazyswarm2](https://imrclab.github.io/crazyswarm2/).
+# TouchSawrm
+A nano-quadcopters controller stack based off CrazySwarm for enabling using crazyswarm as encounter-type haptic feedbacks.
+It can render stiffness up to 1.2g/cm given the 3D printed cage in this design.
 
 
 The documentation is available here: http://crazyswarm.readthedocs.io/en/latest/.
