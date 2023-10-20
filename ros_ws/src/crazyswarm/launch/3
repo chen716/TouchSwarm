@@ -3,35 +3,7 @@ crazyflieTypes:
     bigQuad: False
     batteryVoltageWarning: 3.8 # V
     batteryVoltateCritical: 3.7 # V
-    markerConfiguration: 2 # change to 3 for single marker tracking
-    #
-    dynamicsConfiguration: 0
-    # firmwareParams:
-    #   posCtlPid:
-    #     thrustBase: 38000
-    # ctrlMel: #genericLogTopic_log1_Variables: ["ctrlMel.cmd_thrust","ctrlMel.i_err_z", "acc.z","stateEstimate.z"]
-    #   kp_xy: 0.4 #0.6 # p for position
-    #   kd_xy: 0.2 # 0.35 # d for position
-    #   ki_xy: 0.05
-    #   i_range_xy: 2.0
-    #   kR_xy: 70000 #70000 # p for attitude
-    #   kw_xy: 20000 # d for attitude
-    #   kR_z: 60000 # 70000 # p for yaw
-    #   kw_z: 12000 # 30000  # d for yaw
-    #   ki_m_z: 500 #0 #20000     # i for yaw
-    #   i_range_m_z: 1500 # i range for yaw
-    #   kd_omega_rp: 200 # roll and pitch angular velocity d gain
-    #   kp_z: 1.25 #1.25
-    #   kd_z: 0.4
-    #   ki_z: 0.05 #0.05
-    #   i_range_z: 0.4
-    #   mass: 0.033
-    #   massThrust: 132000
-  cf21:
-    bigQuad: False
-    batteryVoltageWarning: 3.8 # V
-    batteryVoltateCritical: 3.7 # V
-    markerConfiguration: 7 # change to 3 for single marker tracking
+    markerConfiguration: 0 # change to 3 for single marker tracking
     dynamicsConfiguration: 0
     firmwareParams:
       ctrlMel:
@@ -50,7 +22,7 @@ crazyflieTypes:
         kd_z: 0.4
         ki_z: 0.05
         i_range_z: 0.4
-        mass: 0.0040
+        mass: 0.032
         massThrust: 132000
   defaultSingleMarker:
     bigQuad: False
@@ -80,7 +52,7 @@ crazyflieTypes:
         kd_z: 0.4
         ki_z: 0.05
         i_range_z: 0.4
-        mass: 0.037
+        mass: 0.032
         massThrust: 132000
   CF21SingleMarker:
     bigQuad: False
@@ -162,21 +134,19 @@ crazyflieTypes:
         i_range_z: 4.0
         mass: 0.380
         massThrust: 5400 # 5500 - full battery
-numMarkerConfigurations: 10
+numMarkerConfigurations: 4
 markerConfigurations:
-  "0": # for new  Crazyflie facing front
+  "0": # for standard Crazyflie
     numPoints: 4
     offset: [0.0, -0.01, -0.04]
     points:
-      # "0": [0.00574094, 0.00852092, 0.0546796]
-      # "1": [0.015974, -0.00564184, 0.0534674]
-      # "2": [0.0409996, 0.0151082, 0.0532104]
-      # "3": [0.0159939, 0.0438645, 0.05314]
-
-      "0": [0.0751837, 0.0459134, 0.0665486]
-      "1": [0.0833162, 0.00841737, 0.0662543]
-      "2": [0.0598468, 0.066754, 0.067822]
-      "3": [0.0614354, -0.0337322, 0.0671817]
+      "0": [-0.00557337,0.000537687,0.0666842]
+      "1": [0.0377663,0.0116812,0.0661259]
+      "2": [0.0221546,-0.0182944,0.0669353]
+      "3": [-0.00575651,0.0286311,0.0704044]            #"0": [-0.0491921, 0.0100393, 0.0579811]
+            #"1": [-0.0630453, -0.000590752, 0.0571171]
+            #"2": [-0.0140017, 0.00398414, 0.0583354]
+            #"3": [-0.0407311, -0.0253209, 0.0593909]
 
   "1": # medium frame
     numPoints: 4
@@ -186,73 +156,19 @@ markerConfigurations:
       "1": [-0.0156318, 0.0997402, 0.0508162]
       "2": [0.0461693, -0.0881012, 0.0380672]
       "3": [-0.0789959, -0.0269793, 0.0461144]
-  "2": # square cage facing front
+  "2": # big frame
     numPoints: 4
     offset: [0.0, 0.0, -0.06]
     points:
-      "0": [0.0717688, -0.0370788, 0.0645254]
-      "1": [0.0102449, 0.0597621, 0.0659425]
-      "2": [0.0653929, 0.0499016, 0.0670492]
-      "3": [0.0495664, -0.0619747, 0.0663172]
-
-  "3": # square cage
-    numPoints: 4
-    offset: [-0.03, 0.0, -0.07]
-    points:
-      "0": [0.0368087, -0.0604312, 0.0707759]
-      "1": [0.0707283, -0.0285395, 0.0709205]
-      "2": [0.0634822, 0.049559, 0.0701426]
-      "3": [0.0717603, -0.0068311, 0.0707049]
-  "4": # new cage facing left
-    numPoints: 4
-    offset: [-0.05, 0.0, -0.06]
-    points:
-      "0": [0.00610849, 0.0866174, 0.0621287]
-      "1": [-0.0305857, 0.0776838, 0.0613683]
-      "2": [0.0516362, 0.0681799, 0.0643735]
-      "3": [-0.0519452, 0.0639562, 0.0631015]
-
-  "5": # new cf markers facing right
-    numPoints: 4
+      "0": [0.0558163, -0.00196302, 0.0945539]
+      "1": [-0.0113941, 0.00945842, 0.0984811]
+      "2": [-0.0306277, 0.0514879, 0.0520456]
+      "3": [0.0535816, -0.0400775, 0.0432799]
+  "3": # for standard Crazyflie with a single marker
+    numPoints: 1
     offset: [0.0, -0.01, -0.04]
     points:
-      "0": [0.0324112, -0.0512869, 0.0629227]
-      "1": [-0.00515198, -0.0593778, 0.0638565]
-      "2": [0.0524822, -0.0362549, 0.0642902]
-      "3": [-0.0498862, -0.0360267, 0.0652081]
-  "6": # regular cfs
-    numPoints: 4
-    offset: [0.0, -0.01, -0.06]
-    points:
-      "0": [0.003216, -0.0259047, 0.0581305]
-      "1": [-0.0229597, 0.00183362, 0.0579336]
-      "2": [-0.000101286, 0.0230171, 0.0582294]
-      "3": [0.0108468, 0.00893032, 0.0588028]
-  "7": #square cage left markers
-    numPoints: 4
-    offset: [-0.4, -0.06, -0.06]
-    points:
-      "0": [-0.0407922, 0.0672321, 0.0687174]
-      "1": [0.0688561, 0.0489576, 0.0689308]
-      "2": [0.0150093, 0.0758568, 0.0686102]
-      "3": [0.0443866, 0.0757584, 0.0684612]
-  "8": #square cage right markers
-    numPoints: 4
-    offset: [-0.00, 0.0, -0.07]
-    points:
-      "0": [0.072216, -0.0373967, 0.0709077]
-      "1": [-0.0374902, -0.0527459, 0.0740242]
-      "2": [0.0195269, -0.0606705, 0.0728343]
-      "3": [0.0509398, -0.0588057, 0.0713399]
-  "9": #square cage right markers
-    numPoints: 4
-    offset: [-0.02, 0.06, -0.06]
-    points:
-      "0": [0.0152825, -0.0662128, 0.0729592]
-      "1": [0.0667517, -0.0421077, 0.0754148]
-      "2": [-0.0424918, -0.0603349, 0.070047]
-      "3": [0.0464171, -0.0640052, 0.0734438]
-
+      "0": [0.0177184, 0.0139654, 0.0557585]
 numDynamicsConfigurations: 1
 dynamicsConfigurations:
   "0":
